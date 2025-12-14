@@ -1,0 +1,15 @@
+{
+  "name": "com.studio602.dsuframework",
+  "version": "1.0.0",
+  "displayName": "Dsu Framework",
+  "description": "Unity Dsu Framework for developers.",
+  "unity": "2022.3",
+  "keywords": [
+    "framework",
+    "dsu"
+  ],
+  "author": {
+    "name": "Jintaek Seo",
+    "email": "jintaeks@gmail.com"
+  }
+}
