@@ -1,3 +1,5 @@
+/// @file   HighlightThis.cs
+/// @date   20251215_jintaeks
 using UnityEngine;
 
 #if UNITY_EDITOR
@@ -16,10 +18,8 @@ namespace Dsu.Extension
         {
             if (!showLabel) return;
 
-            // 글씨 위치 설정: Pivot 아래쪽
             Vector3 labelPosition = transform.position + Vector3.down * 0.1f;
 
-            // 핸들 색상 및 스타일 설정
             GUIStyle style = new GUIStyle();
             style.normal.background = Texture2D.grayTexture;
             style.normal.textColor = Color.red;

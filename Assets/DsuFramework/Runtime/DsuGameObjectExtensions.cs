@@ -1,3 +1,5 @@
+/// @file   DsuGameObjectExtensions.cs
+/// @date   20251215_jintaeks
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -13,7 +15,7 @@ namespace Dsu.Framework
     [Serializable]
     public partial class GameObjectPropertyData : GameObjectPropertyBase
     {
-        public bool isMovable;
+        public bool isMovable; // sample property
     }//public partial class GameObjectPropertyData
 
     public static partial class DsuGameObjectExtensions

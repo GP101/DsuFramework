@@ -1,4 +1,6 @@
-﻿#if UNITY_EDITOR
+﻿/// @file   WhatUsesThis.cs
+/// @date   20251215_jintaeks
+#if UNITY_EDITOR
 using UnityEngine;
 using UnityEditor;
 using System.Collections.Generic;

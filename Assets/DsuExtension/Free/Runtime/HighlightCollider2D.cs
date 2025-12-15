@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿/// @file   HighlightCollider2D.cs
+/// @date   20251215_jintaeks
+using UnityEngine;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif

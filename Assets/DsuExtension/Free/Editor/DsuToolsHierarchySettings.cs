@@ -1,3 +1,5 @@
+/// @file   DsuToolsHierarchySettings.cs
+/// @date   20251215_jintaeks
 #if UNITY_EDITOR
 using UnityEditor;
 using UnityEngine;

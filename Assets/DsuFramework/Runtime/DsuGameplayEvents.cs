@@ -1,4 +1,5 @@
-// Gameplay.cs
+/// @file   DsuGameplayEvents.cs
+/// @date   20251215_jintaeks
 using System;
 using UnityEngine;
 

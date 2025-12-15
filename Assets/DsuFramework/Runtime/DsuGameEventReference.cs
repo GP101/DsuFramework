@@ -1,3 +1,5 @@
+/// @file   DsuGameEventReference.cs
+/// @date   20251215_jintaeks
 using System;
 using System.Collections;
 using System.Collections.Generic;

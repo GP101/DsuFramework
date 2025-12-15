@@ -5,3 +5,6 @@
 /*.csproj
 /*.sln
 /*.vsconfig
+/.vs
+/obj
+/Temp

@@ -1,3 +1,5 @@
+/// @file   HighlightCanvasEditor.cs
+/// @date   20251215_jintaeks
 #if UNITY_EDITOR
 using UnityEngine;
 using UnityEditor;
@@ -13,7 +15,6 @@ namespace Dsu.Extension
             Rect startRect = GUILayoutUtility.GetRect(0, 0, GUILayout.ExpandWidth(true));
             float startY = startRect.y;
 
-            // 기본 인스펙터 출력
             DrawDefaultInspector();
 
             GUILayout.Space(10);

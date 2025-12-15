@@ -1,4 +1,6 @@
-﻿#if UNITY_EDITOR
+﻿/// @file   UIReferenceFinder.cs
+/// @date   20251215_jintaeks
+#if UNITY_EDITOR
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
@@ -19,7 +21,7 @@ namespace Dsu.Framework
         private int maxHierarchyDepth = 2;
         private string depthInput = "2";
 
-        private string searchQuery = ""; // 검색 문자열
+        private string searchQuery = "";
 
         private enum LastAction
         {
@@ -107,12 +109,12 @@ namespace Dsu.Framework
             }
             GUILayout.EndHorizontal();
 
-            // 검색 UI 추가
+            // added search UI
             GUILayout.BeginHorizontal();
             GUILayout.Label("Search", GUILayout.Width(70));
             searchQuery = GUILayout.TextField(searchQuery);
             if (GUILayout.Button("Search", GUILayout.Width(80))) {
-                Repaint(); // 검색 후 다시 그림
+                Repaint(); // redraw after search
             }
             GUILayout.EndHorizontal();
 
@@ -173,7 +175,7 @@ namespace Dsu.Framework
             foreach (var info in sortedResults) {
                 if (info.gameObject == null) continue;
 
-                // 검색 조건 추가
+                // added search condition
                 if (!string.IsNullOrEmpty(searchQuery)) {
                     bool matchFound = info.gameObject.name.ToLower().Contains(searchQuery.ToLower());
 
@@ -191,19 +193,19 @@ namespace Dsu.Framework
                 int indentLevel = GetHierarchyDepth(info.gameObject.transform);
                 float indentWidth = indentLevel * 20f;
 
-                // 각 게임 객체를 회색 블록으로 감싸기
+                // wrap gray block for each game object
                 EditorGUILayout.BeginVertical("box");
                 
                 GUILayout.BeginHorizontal();
                 GUILayout.Space(indentWidth);
                 GUILayout.Label(info.gameObject.name, EditorStyles.boldLabel);
                 
-                // Select 버튼 추가
+                // added Select button
                 if (GUILayout.Button("Select", GUILayout.Width(50))) {
                     Selection.activeObject = info.gameObject;
                 }
                 
-                // Focus 버튼 추가
+                // added Focus button
                 if (GUILayout.Button("Focus", GUILayout.Width(50))) {
                     Selection.activeObject = info.gameObject;
                     EditorGUIUtility.PingObject(info.gameObject);

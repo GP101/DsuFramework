@@ -3,3 +3,9 @@ syntax: glob
 Library/*
 Logs/*
 UserSettings/*
+obj/*
+.vs/*
+Temp/*
+.vsconfig
+*.csproj
+*.sln

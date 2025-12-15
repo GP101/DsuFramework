@@ -1,3 +1,5 @@
+/// @file   SingletonBase.cs
+/// @date   20251215_jintaeks
 using UnityEngine;
 
 namespace Dsu.Framework

@@ -1,3 +1,5 @@
+/// @file   HighlightThisEditor.cs
+/// @date   20251215_jintaeks
 #if UNITY_EDITOR
 using UnityEditor;
 using UnityEngine;
@@ -43,19 +45,17 @@ namespace Dsu.Extension
         {
             HighlightThis highlight = (HighlightThis)target;
 
-            // 기본 필드
             DrawDefaultInspector();
 
             GUILayout.Space(10);
 
-            // Remove 버튼 스타일
+            // Remove button style
             GUIStyle removeButtonStyle = new GUIStyle(GUI.skin.button);
             removeButtonStyle.normal.textColor = Color.white;
             removeButtonStyle.fontStyle = FontStyle.Bold;
             removeButtonStyle.alignment = TextAnchor.MiddleCenter;
             removeButtonStyle.padding = new RectOffset(10, 10, 6, 6);
 
-            // 버튼 배경색 빨간색
             Color originalBackgroundColor = GUI.backgroundColor;
             GUI.backgroundColor = Color.red;
 

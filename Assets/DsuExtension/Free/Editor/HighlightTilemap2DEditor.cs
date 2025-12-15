@@ -1,3 +1,5 @@
+/// @file   HighlightTilemap2DEditor.cs
+/// @date   20251215_jintaeks
 #if UNITY_EDITOR
 using UnityEngine;
 using UnityEditor;
@@ -12,7 +14,6 @@ namespace Dsu.Extension
             // Begin position tracking
             Rect startRect = GUILayoutUtility.GetRect(0, 0, GUILayout.ExpandWidth(true));
 
-            // 기본 인스펙터 그리기
             DrawDefaultInspector();
 
             GUILayout.Space(10);

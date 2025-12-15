@@ -1,4 +1,6 @@
-﻿#if UNITY_EDITOR
+﻿/// @file   SpriteBrowser.cs
+/// @date   20251215_jintaeks
+#if UNITY_EDITOR
 using UnityEditor;
 using UnityEngine;
 using System.Collections.Generic;
@@ -15,7 +17,7 @@ namespace Dsu.Extension
         private Dictionary<string, bool> foldoutStates = new();
         private bool riggedOnly = false;
 
-        private string searchQuery = ""; // 검색어 입력
+        private string searchQuery = "";
 
         private string[] asyncGuids;
         private int asyncIndex = 0;
@@ -36,11 +38,11 @@ namespace Dsu.Extension
                     StartSpriteSearch();
                 }
 
-                // 검색창 + 버튼
+                // search window and button
                 GUILayout.BeginHorizontal();
                 searchQuery = GUILayout.TextField(searchQuery);
                 if (GUILayout.Button("Search", GUILayout.Width(80))) {
-                    Repaint(); // 검색 반영
+                    Repaint();
                 }
                 GUILayout.EndHorizontal();
             }
@@ -53,7 +55,7 @@ namespace Dsu.Extension
                 GUILayout.EndHorizontal();
             }
 
-            // 2D Rigged Only 토글
+            // 2D Rigged Only toggle button
             riggedOnly = EditorGUILayout.Toggle("2D Rigged Only", riggedOnly);
 
             GUILayout.Space(10);
@@ -66,7 +68,7 @@ namespace Dsu.Extension
                 foreach (var kvp in folderToSprites) {
                     string folder = kvp.Key;
 
-                    // 이름 + Rigged 여부 필터
+                    // name + Rigged on/off filter
                     List<Texture2D> filtered = kvp.Value
                         .Where(tex =>
                         {
@@ -178,7 +180,7 @@ namespace Dsu.Extension
 
             EditorGUILayout.BeginVertical("box");
 
-            // 텍스처 이름 출력 (가장 위)
+            // print texture name(topmost)
             GUILayout.Label("Name: " + tex.name, EditorStyles.boldLabel);
 
             EditorGUILayout.ObjectField("Texture", tex, typeof(Texture2D), false);

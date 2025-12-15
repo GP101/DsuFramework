@@ -3,6 +3,18 @@ using Dsu.Framework;
 
 public class NewGameplayManager : DsuGameplayManagerBase
 {
+    //public DsuGameEventReference pickupEventRef;
+
+    //private void OnEnable()
+    //{
+    //    pickupEventRef.RegisterAction(OnPickupEvent);
+    //}
+
+    //private void OnDisable()
+    //{
+    //    pickupEventRef.UnregisterAction(OnPickupEvent);
+    //}
+
     void Start()
     {
         // How to use the NewGameplayManager in other component

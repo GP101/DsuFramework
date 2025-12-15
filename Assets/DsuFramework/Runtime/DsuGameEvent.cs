@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿/// @file   DsuGameEvent.cs
+/// @date   20251215_jintaeks
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;

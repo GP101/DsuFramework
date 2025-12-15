@@ -1,3 +1,5 @@
+/// @file   HighlightCollider2DEditor.cs
+/// @date   20251215_jintaeks
 #if UNITY_EDITOR
 using UnityEngine;
 using UnityEditor;
@@ -15,7 +17,6 @@ namespace Dsu.Extension
 
             GUILayout.BeginVertical();
 
-            // 박스 내부 내용 그리기
             DrawDefaultInspector();
 
             GUILayout.Space(10);

@@ -1,3 +1,5 @@
+/// @file   AssetBookmarksEditor.cs
+/// @date   20251215_jintaeks
 #if UNITY_EDITOR
 using UnityEngine;
 using UnityEditor;

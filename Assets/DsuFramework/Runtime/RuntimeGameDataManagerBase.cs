@@ -1,3 +1,5 @@
+/// @file   RuntimeGameDataManagerBase.cs
+/// @date   20251215_jintaeks
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -5,20 +7,20 @@ namespace Dsu.Framework
 {
     public class RuntimeGameDataManagerBase : MonoBehaviour
     {
-        // 그룹별 데이터 스탬프
+        // data stamp for each group
         private static Dictionary<int, int> _dataStamps = new Dictionary<int, int>();
         private static Dictionary<int, int> _actionDataStamps = new Dictionary<int, int>();
 
-        // 변경된 그룹만 추적
+        // trace modified groups
         private static HashSet<int> _dirtyGroups = new HashSet<int>();
 
         public delegate void DataUpdatedAction(int groupId);
         public static event DataUpdatedAction OnDataUpdated;
 
-        // 기본 그룹 상수
+        // default group ID
         private const int DefaultGroupId = 0;
 
-        // 하위 호환용 (기본 그룹 0 사용)
+        // for backward compatibility(uses Group ID 0)
         public static void RefreshData()
         {
             RefreshData(DefaultGroupId);
@@ -34,7 +36,7 @@ namespace Dsu.Framework
             _UpdateDataStamp(DefaultGroupId);
         }
 
-        // 그룹별 메서드
+        // update specific group ID
         public static void RefreshData(int groupId)
         {
             _UpdateDataStamp(groupId);
@@ -61,7 +63,7 @@ namespace Dsu.Framework
             return _dataStamps[groupId];
         }
 
-        // 매 프레임 변경된 그룹만 처리
+        // process only modified group for each frame
         protected virtual void Update()
         {
             if (_dirtyGroups.Count == 0)
@@ -77,7 +79,7 @@ namespace Dsu.Framework
                 }
             }
 
-            _dirtyGroups.Clear(); // 처리 완료 후 초기화
+            _dirtyGroups.Clear(); // clear dirty group when done
         }
     }
 }

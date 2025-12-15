@@ -1,3 +1,5 @@
+/// @file   UIControllerBase.cs
+/// @date   20251215_jintaeks
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
