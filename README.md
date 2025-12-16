@@ -1,5 +1,7 @@
 # DsuFramework
 
+![](./Documentation~/UnityDsuFramework01_UIMVCPattern-edited.png)
+
 ## Overview
 
 When creating a game, it is very important to make each component of the game maintainable and independent. For example, if the **Player** script handles player-related mechanics while also managing **Animation** and **UI**, this is considered a bad approach. The reason is that whenever the animation or UI changes, the Player script must also be modified.

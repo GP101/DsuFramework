@@ -1,5 +1,7 @@
 # DsuFramework
 
+![](./Documentation~/UnityDsuFramework01_UIMVCPattern-edited.png)
+
 ## Overview
 
 게임을 만들 때, 게임을 구성하는 각각의 요소를 독립적으로 유지보수 가능하게 만드는 것은 매우 중요합니다. 예를 들면 Player 스크립트가 Player와 연관된 Mechanic을 처리하면서, Animation과 UI를 함께 처리하는 것은 나쁜 방법입니다. 왜냐하면 Animation이 변경되거나, UI가 변경되면 Player스크립트를 수정해야 하기 때문입니다.
